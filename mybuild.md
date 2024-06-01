@@ -91,6 +91,7 @@ Build cuda_12.4.r12.4/compiler.34097967_0
 
 
 conda list | grep cuda
+** To determine the version of CUDA installed, you typically look for the version associated with the cuda-toolkit package
 
 (photoslam) s42sdamm@photolab96:~/Documents/thesis/Photo-SLAM$ conda list | grep cuda
 cuda-cccl                 12.4.127             h06a4308_2  
