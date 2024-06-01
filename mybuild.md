@@ -144,7 +144,7 @@ cuda-visual-tools         12.4.1               h06a4308_1
 
 ```
 
-8. Installing CuDNN
+8. Installing CuDNN (Available version:  cudnn 8.9.7.29 using conda-forge)
 ```
 URL: https://anaconda.org/conda-forge/cudnn
 
