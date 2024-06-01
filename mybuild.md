@@ -144,6 +144,14 @@ cuda-visual-tools         12.4.1               h06a4308_1
 
 ```
 
+7.1. CUDA Path
+```
+which nvcc
+
+(photoslam) s42sdamm@photolab96:~/Documents/thesis/Photo-SLAM$ which nvcc
+/home_domuser/s42sdamm/miniconda3/envs/photoslam/bin/nvcc
+```
+
 8. Installing CuDNN (Available version:  cudnn 8.9.7.29 using conda-forge)
 ```
 URL: https://anaconda.org/conda-forge/cudnn
