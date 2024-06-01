@@ -78,6 +78,7 @@ sudo apt install libeigen3-dev libboost-all-dev libjsoncpp-dev libopengl-dev mes
     </tbody>
 </table>
 
+
 ### Using LibTorch
 If you do not have the LibTorch installed in the system search paths for CMake, you need to add additional options to `build.sh` help CMake find LibTorch. See `build.sh` for details. Otherwise, you can also add one line before `find_package(Torch REQUIRED)` of `CMakeLists.txt`:
 
