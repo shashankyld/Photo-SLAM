@@ -69,3 +69,11 @@ Sat Jun  1 20:16:32 2024
 +-----------------------------------------------------------------------------------------+
 
 ```
+
+6. CUDA Toolkit install using conda
+
+URL: https://anaconda.org/nvidia/cuda-toolkit
+```
+conda install nvidia/label/cuda-11.8.0::cuda-toolkit
+Description: Meta-package containing all toolkit packages for CUDA development
+```
