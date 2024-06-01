@@ -144,3 +144,9 @@ cuda-visual-tools         12.4.1               h06a4308_1
 
 ```
 
+8. Installing CuDNN
+```
+URL: https://anaconda.org/conda-forge/cudnn
+
+conda install conda-forge::cudnn
+```
