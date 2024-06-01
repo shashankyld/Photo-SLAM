@@ -149,4 +149,8 @@ cuda-visual-tools         12.4.1               h06a4308_1
 URL: https://anaconda.org/conda-forge/cudnn
 
 conda install conda-forge::cudnn
+
+(photoslam) s42sdamm@photolab96:~/Documents/thesis/Photo-SLAM$ conda list | grep cudnn
+cudnn                     8.9.7.29             h092f7fd_3    conda-forge
+
 ```
