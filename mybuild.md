@@ -77,3 +77,69 @@ URL: https://anaconda.org/nvidia/cuda-toolkit
 conda install nvidia/label/cuda-11.8.0::cuda-toolkit
 Description: Meta-package containing all toolkit packages for CUDA development
 ```
+
+7. NVCC after CUDA Toolkit installation
+```
+nvcc -V
+
+(photoslam) s42sdamm@photolab96:~/Documents/thesis/Photo-SLAM$ nvcc -V
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Mar_28_02:18:24_PDT_2024
+Cuda compilation tools, release 12.4, V12.4.131
+Build cuda_12.4.r12.4/compiler.34097967_0
+
+
+conda list | grep cuda
+
+(photoslam) s42sdamm@photolab96:~/Documents/thesis/Photo-SLAM$ conda list | grep cuda
+cuda-cccl                 12.4.127             h06a4308_2  
+cuda-cccl_linux-64        12.4.127             h06a4308_2  
+cuda-command-line-tools   12.4.1               h06a4308_1  
+cuda-compiler             12.4.1               h6a678d5_1  
+cuda-crt-dev_linux-64     12.4.131             h06a4308_0  
+cuda-crt-tools            12.4.131             h06a4308_0  
+cuda-cudart               12.4.127             h99ab3db_0  
+cuda-cudart-dev           12.4.127             h99ab3db_0  
+cuda-cudart-dev_linux-64  12.4.127             hd681fbe_0  
+cuda-cudart-static        12.4.127             h99ab3db_0  
+cuda-cudart-static_linux-64 12.4.127             hd681fbe_0  
+cuda-cudart_linux-64      12.4.127             hd681fbe_0  
+cuda-cuobjdump            12.4.127             h6a678d5_1  
+cuda-cupti                12.4.127             h6a678d5_1  
+cuda-cupti-dev            12.4.127             h6a678d5_1  
+cuda-cuxxfilt             12.4.127             h6a678d5_1  
+cuda-documentation        11.8.86                       0    nvidia/label/cuda-11.8.0
+cuda-driver-dev           12.4.127             h99ab3db_0  
+cuda-driver-dev_linux-64  12.4.127             hd681fbe_0  
+cuda-gdb                  12.4.127             h122497a_1  
+cuda-libraries            12.4.1               h06a4308_1  
+cuda-libraries-dev        12.4.1               h06a4308_1  
+cuda-nsight               12.4.127             h06a4308_1  
+cuda-nvcc                 12.4.131             h02f8991_0  
+cuda-nvcc-dev_linux-64    12.4.131             h4ee8466_0  
+cuda-nvcc-impl            12.4.131             h99ab3db_0  
+cuda-nvcc-tools           12.4.131             h99ab3db_0  
+cuda-nvcc_linux-64        12.4.131             he92618c_0  
+cuda-nvdisasm             12.4.127             h6a678d5_1  
+cuda-nvml-dev             12.4.127             h6a678d5_1  
+cuda-nvprof               12.4.127             h6a678d5_1  
+cuda-nvprune              12.4.127             h6a678d5_1  
+cuda-nvrtc                12.4.127             h99ab3db_1  
+cuda-nvrtc-dev            12.4.127             h99ab3db_1  
+cuda-nvtx                 12.4.127             h6a678d5_1  
+cuda-nvvm-dev_linux-64    12.4.131             h06a4308_0  
+cuda-nvvm-impl            12.4.131             h6a678d5_0  
+cuda-nvvm-tools           12.4.131             h6a678d5_0  
+cuda-nvvp                 12.4.127             h6a678d5_1  
+cuda-opencl               12.4.127             h6a678d5_0  
+cuda-opencl-dev           12.4.127             h6a678d5_0  
+cuda-profiler-api         12.4.127             h06a4308_1  
+cuda-sanitizer-api        12.4.127             h99ab3db_1  
+cuda-toolkit              11.8.0                        0    nvidia/label/cuda-11.8.0
+cuda-tools                12.4.1               h06a4308_1  
+cuda-version              12.4                 hbda6634_3  
+cuda-visual-tools         12.4.1               h06a4308_1 
+
+```
+
