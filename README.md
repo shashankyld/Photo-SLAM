@@ -105,7 +105,19 @@ mkdir build
 cd build
 
 # The build options we used in our tests:
-cmake -DCMAKE_BUILD_TYPE=RELEASE -DWITH_CUDA=ON -DWITH_CUDNN=ON -DOPENCV_DNN_CUDA=ON -DWITH_NVCUVID=ON -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8 -DOPENCV_EXTRA_MODULES_PATH="../../opencv_contrib-4.7.0/modules" -DBUILD_TIFF=ON -DBUILD_ZLIB=ON -DBUILD_JASPER=ON -DBUILD_CCALIB=ON -DBUILD_JPEG=ON -DWITH_FFMPEG=ON ..
+cmake -DCMAKE_BUILD_TYPE=RELEASE 
+-DWITH_CUDA=ON
+-DWITH_CUDNN=ON
+-DOPENCV_DNN_CUDA=ON
+-DWITH_NVCUVID=ON
+-DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.8
+-DOPENCV_EXTRA_MODULES_PATH="../../opencv_contrib-4.7.0/modules"
+-DBUILD_TIFF=ON
+-DBUILD_ZLIB=ON
+-DBUILD_JASPER=ON
+-DBUILD_CCALIB=ON
+-DBUILD_JPEG=ON
+-DWITH_FFMPEG=ON ..
 
 # Take a moment to check the cmake output, see if there are any packages needed by OpenCV but not installed on your device
 
