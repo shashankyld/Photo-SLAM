@@ -167,3 +167,90 @@ conda install conda-forge::cudnn
 cudnn                     8.9.7.29             h092f7fd_3    conda-forge
 
 ```
+
+9. I have two different things to test. While installing opencv as mentioned in the README.md, I encountered this issue
+```
+(photoslam) s42sdamm@photolab97:~/Documents/thesis/opencv/opencv-4.7.0/build$ make -j8
+[  0%] Built target opencv_videoio_plugins
+[  0%] Built target opencv_highgui_plugins
+[  0%] Built target opencv_dnn_plugins
+[  0%] Built target ittnotify
+[  1%] Built target zlib
+[  2%] Built target libopenjp2
+[  2%] Built target quirc
+[  3%] Built target ippiw
+[  4%] Built target jsimd
+[  6%] Built target opencv_cudev
+[  6%] Built target libtiff
+[  7%] Built target ade
+[  7%] Building NVCC (Device) object modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gpu_mat.cu.o
+[  7%] Building NVCC (Device) object modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gpu_mat_nd.cu.o
+[  8%] Built target libprotobuf
+[ 10%] Built target libjpeg-turbo
+nvcc warning : incompatible redefinition for option 'compiler-bindir', the last value of this option was used
+nvcc warning : incompatible redefinition for option 'compiler-bindir', the last value of this option was used
+[ 14%] Built target libwebp
+[ 17%] Built target IlmImf
+In file included from /usr/include/ctype.h:39,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/crt/host_defines.h:64,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/device_types.h:59,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/builtin_types.h:56,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/cuda_runtime.h:90,
+                 from <command-line>:
+/ipb245/home_domuser/s42sdamm/miniconda3/envs/photoslam/x86_64-conda-linux-gnu/sysroot/usr/include/bits/endian.h:4:3: error: #error "Never use <bits/endian.h> directly; include <endian.h> instead."
+    4 | # error "Never use <bits/endian.h> directly; include <endian.h> instead."
+      |   ^~~~~
+In file included from /usr/include/ctype.h:39,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/crt/host_defines.h:64,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/device_types.h:59,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/builtin_types.h:56,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/cuda_runtime.h:90,
+                 from <command-line>:
+/ipb245/home_domuser/s42sdamm/miniconda3/envs/photoslam/x86_64-conda-linux-gnu/sysroot/usr/include/bits/endian.h:4:3: error: #error "Never use <bits/endian.h> directly; include <endian.h> instead."
+    4 | # error "Never use <bits/endian.h> directly; include <endian.h> instead."
+      |   ^~~~~
+In file included from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/crt/host_defines.h:64,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/device_types.h:59,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/builtin_types.h:56,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/cuda_runtime.h:90,
+                 from <command-line>:
+/usr/include/ctype.h:237:11: fatal error: bits/types/locale_t.h: No such file or directory
+  237 | # include <bits/types/locale_t.h>
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+In file included from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/crt/host_defines.h:64,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/device_types.h:59,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/builtin_types.h:56,
+                 from /home_domuser/s42sdamm/miniconda3/envs/photoslam/targets/x86_64-linux/include/cuda_runtime.h:90,
+                 from <command-line>:
+/usr/include/ctype.h:237:11: fatal error: bits/types/locale_t.h: No such file or directory
+  237 | # include <bits/types/locale_t.h>
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMake Error at cuda_compile_1_generated_gpu_mat.cu.o.RELEASE.cmake:222 (message):
+  Error generating
+  /home_domuser/s42sdamm/Documents/thesis/opencv/opencv-4.7.0/build/modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_gpu_mat.cu.o
+
+
+CMake Error at cuda_compile_1_generated_gpu_mat_nd.cu.o.RELEASE.cmake:222 (message):
+  Error generating
+  /home_domuser/s42sdamm/Documents/thesis/opencv/opencv-4.7.0/build/modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/./cuda_compile_1_generated_gpu_mat_nd.cu.o
+
+
+make[2]: *** [modules/core/CMakeFiles/opencv_core.dir/build.make:65: modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gpu_mat.cu.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [modules/core/CMakeFiles/opencv_core.dir/build.make:72: modules/core/CMakeFiles/cuda_compile_1.dir/src/cuda/cuda_compile_1_generated_gpu_mat_nd.cu.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:4972: modules/core/CMakeFiles/opencv_core.dir/all] Error 2
+make: *** [Makefile:163: all] Error 2
+
+```
+
+I could find a way to fix this missing locale_t.h problem. Internet suggests to install build-essentials along with few other packages. But I dont have the sudo 
+access and I couldn't find a way to install all the build-essential packages from source - no git repo. 
+```
+A. I would like to first investigate where this <bits/types/local_t.h> can be found. Is it fundamental to C language and so on. 
+B. Try to change nvcc version from 12.X to 11.8 
+C. Try to change the GCC version
+D. Try giving a host compiler flag while building OpenCV. 
+E. Write down the learnings from the above tasks.
+```
