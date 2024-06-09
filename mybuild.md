@@ -254,3 +254,8 @@ C. Try to change the GCC version
 D. Try giving a host compiler flag while building OpenCV. 
 E. Write down the learnings from the above tasks.
 ```
+
+10. I had clock skew error while building opencv. Tried downloading source from the official tags from git hub instead of click to download link mentioned in the documentation. 
+
+
+
