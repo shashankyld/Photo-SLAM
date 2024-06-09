@@ -257,5 +257,7 @@ E. Write down the learnings from the above tasks.
 
 10. I had clock skew error while building opencv. Tried downloading source from the official tags from git hub instead of click to download link mentioned in the documentation. 
 
+11. I installed opencv-contrib using pip into my conda env, just for trying. Running cv2.__file__ gives path /home_domuser/s42sdamm/miniconda3/envs/photoslam/lib/python3.10/site-packages/cv2/__init__.py
+    which I can maybe use to edit CMakeLists as they explain to build photoslam, lets see
 
 
