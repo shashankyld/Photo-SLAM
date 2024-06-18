@@ -1,0 +1,58 @@
+Fixing Linking Issues with libc.so.6, libc_nonshared.a, and librt.so.1
+
+During the build process for a project in the Photo-SLAM repository, several linking issues were encountered due to missing symbolic links for crucial libraries. The steps to resolve these issues are detailed below.
+Problem Encountered
+
+    Missing libc.so.6:
+        The system reported that /lib64/libc.so.6 was not found, causing linker errors.
+
+    Missing libc_nonshared.a:
+        The linker couldn't find /usr/lib64/libc_nonshared.a.
+
+    Missing librt.so.1:
+        The linker also reported that /lib64/librt.so.1 was missing.
+
+Steps Taken to Resolve the Issues
+
+    Fixing libc.so.6:
+        First, the symbolic link for libc.so.6 was found to be incorrect. It pointed to an incompatible version.
+        The incorrect symbolic link was removed and a new link was created pointing to the correct version in /usr/lib/x86_64-linux-gnu/.
+
+    bash
+
+sudo rm /lib64/libc.so.6
+sudo ln -s /usr/lib/x86_64-linux-gnu/libc.so.6 /lib64/libc.so.6
+
+Fixing libc_nonshared.a:
+
+    The libc_nonshared.a file was found in the /usr/lib/x86_64-linux-gnu/ directory.
+    A symbolic link was created to point to this file from the expected location.
+
+bash
+
+sudo ln -s /usr/lib/x86_64-linux-gnu/libc_nonshared.a /usr/lib64/libc_nonshared.a
+
+Fixing librt.so.1:
+
+    Similarly, the librt.so.1 file was located in the /usr/lib/x86_64-linux-gnu/ directory.
+    A symbolic link was created for librt.so.1 in /lib64.
+
+bash
+
+    sudo ln -s /usr/lib/x86_64-linux-gnu/librt.so.1 /lib64/librt.so.1
+
+Verification and Rebuild
+
+After creating the correct symbolic links, the build process was re-attempted to verify that the linker errors were resolved.
+
+    Rebuilding the Project:
+        The build script was run again to check if the issues were fixed.
+
+    bash
+
+    ./build.sh
+
+    Successful Build:
+        The project successfully compiled without the previous linker errors, indicating that the symbolic link corrections were effective.
+
+By correctly linking the necessary libraries, the build process was able to proceed without further issues. This highlights the importance of ensuring that symbolic links point to the correct library versions, especially for critical components like libc.so.6.
