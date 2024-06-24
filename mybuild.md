@@ -148,6 +148,10 @@ cuda-version              12.4                 hbda6634_3
 cuda-visual-tools         12.4.1               h06a4308_1 
 
 ```
+######### For nvcc ###############
+```
+conda install nvidia/label/cuda-11.8.0::cuda-nvcc
+```
 
 7.1. CUDA Path
 ```
